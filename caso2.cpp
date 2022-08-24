@@ -9,14 +9,20 @@ struct parameter // struct que permite definir qué debe llevar un elemento del 
     string valor;
 };
 
+struct accion
+{
+    string accName;
+    parameter modificacion;
+}
+
 // clase principal llamada dispositivo
 class Dispositivo{
     public:                    // define atributos privados
         string nombre;          // nombre de un dispositivo
         string tipo;          // tipo del dispositivo
         int habitacion;         // numero de habitacion en el que se ubica
-        vector<string> acciones;      // vector que contiene
         vector<parameter> parameters; // vector que contiene parametros editables del dispositivo propio  
+        vector<accion> acciones;      // vector que contiene
         
     public:
         acciones(){}; // metodo que retorna las acciones que el usuario puede escoger llamar del dispositivo propio
@@ -39,10 +45,14 @@ void agregarDis(int habitacion,  vector<Dispositivo> &PlistaDispositivos, vector
     // Con eso ya se añadiria el dispositivo a la habitacion correspoendiente
 }
 
+struct procedimiento{
+    Dispositivo disName;
+    vector<accion> listaAcciones;
+}
+
 struct tarea{
-    string nombre;
-    vector<Dispositivo> disInvolucrados; // {luces, coffe, luz_baño, alarma}
-    vector<string> accEjecutar;          // {apagar, encender, encender, apagar}
+    string tarName;
+    vector<procedimiento> procedimientos  
 }
 
 
