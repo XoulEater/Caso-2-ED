@@ -58,6 +58,7 @@ struct tarea{
 
 void creaTareas(vector<Dispositivo> &PlistaDispositivos, vector<tarea> &PlistaTareas){
     tarea tareaCreada;
+    procedimiento procCreado
     // Pide nombre la tarea a agregar
     // tareaCreada.nombre = [nombre dado]
     // Ciclo para agregar dispositivos y sus acciones a ejecutar respectivamente
@@ -65,13 +66,17 @@ void creaTareas(vector<Dispositivo> &PlistaDispositivos, vector<tarea> &PlistaTa
         // Pide el nombre del Dispositivo 
         // Valida si existe el dispositivo en PlistaDispositivos
             // Si no existe retorna error y vuele pedir el dispositivo
+          
+        // procCreado.disName = Dispositivo
+        // Ciclo para pedir acciones del dispositivo
 
-        // Pide el nombre de la accion a ejecutar
-        // Valida si existe el la accion en Dispositivo.acciones
-            // Si no existe retorna error y vuelve pedir la accion     
+            // Pide el nombre de la accion a ejecutar
+            // Valida si existe el la accion en Dispositivo.acciones
+                // Si no existe retorna error y vuelve pedir la accion  
 
-        // tareaCreada.disInvoulucadros.push_back(Dispositivo)
-        // tareaCreada.accEjecutar.push_back(accion)
+            // procCreado.listaAcciones.push_back(accion)
+
+        //tareaCreada.procedimientos.push_back(procCreado)
 
     // Una vez finalizado el ciclo se hace PlistaTareas.push_back(tareaCreada)
 }
